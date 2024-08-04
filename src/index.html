@@ -2,23 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Mini-game</title>
   </head>
   <body>
-    <load ="partials/header.html" />
+    <div class="welcome-div">
+      <h1>Welcomse!</h1>
+      <h2>Rules:</h2>
+      <p>You have 3 lives</p>
 
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
+      <p>If you don't guess the letter, one life is taken away</p>
 
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
+      <p>When lives run out the game starts again</p>
 
-    <script type="module" src="./main.js"></script>
+      <p>Good Luck!</p>
+    </div>
+
+    <div class="category-selection">
+      <label for="category">Choose a category:</label>
+      <select id="category">
+        <option value="fruits">Fruits</option>
+        <option value="furniture">Furniture</option>
+        <option value="nature">Nature</option>
+        <option value="technology">Technology</option>
+        <option value="transport">Transport</option>
+        <option value="household">Household</option>
+        <option value="hobbies">Hobbies</option>
+      </select>
+    </div>
+
+    <div class="start-game-div">
+      <button type="button" class="start-button">Start!</button>
+    </div>
+    <form action="form" id="form">
+      <input type="text" id="userInput" maxlength="1" />
+      <button type="submit">Check</button>
+    </form>
+    <div class="container">
+      <div class="box no-select">A</div>
+      <div class="box no-select">B</div>
+      <div class="box no-select">C</div>
+      <div class="box no-select">D</div>
+      <div class="box no-select">E</div>
+    </div>
+
+    <div class="hint"></div>
+    <div class="lives">Lives left:<span class="lives-span"></span></div>
+    <script src="./main.js" type="module"></script>
   </body>
 </html>
